@@ -22,8 +22,9 @@ export default {
     },
     methods: {
         login() {
-            window.user = this.username,
-            this.$router.push({name:'protected'})
+            window.user = this.username
+            const redirectPath = this.$route.query.redirect || '/protected'
+            this.$router.push(redirectPath)
         }
     }
 }
