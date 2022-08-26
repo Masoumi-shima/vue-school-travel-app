@@ -5,6 +5,17 @@ import sourceData from '@/data.json'
 
 const routes = [
   {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/Login.vue')
+  },
+  {
+    path: "/",
+    name: "home",
+    component: HomeView,
+    alias: '/home'
+  },
+  {
     path:'/protected',
     name:'protected',
     components: {
@@ -16,11 +27,6 @@ const routes = [
     }
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/Login.vue')
-  },
-  {
     path: '/invoices',
     name: 'invoices',
     components: {
@@ -30,11 +36,6 @@ const routes = [
     meta: {
       requiresAuth: true
     }
-  },
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
   },
   {
     path: "/destination/:id/:slug",
