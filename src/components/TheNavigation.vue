@@ -15,14 +15,12 @@
 
 <script>
 import sourceData from '@/data.json'
-import AppLink from '@/components/AppLink.vue'
 
 export default {
     data() {
         return {
             destinations: sourceData.destinations
         };
-    },
-    components: {AppLink}
-}
+    }
+    }
 </script>
